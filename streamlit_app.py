@@ -47,11 +47,11 @@ if guess_btn:
     elif g < secret:
         st.session_state.message = "太小了，再試一次！"
         st.session_state.min_value = g
-        st.experimental_rerun()
+        st.rerun()
     else:  # g > secret
         st.session_state.message = "太大了，再試一次！"
         st.session_state.max_value = g
-        st.experimental_rerun()
+        st.rerun()
 
 # ---------- 4. 重新開始 ----------
 if reset_btn or st.session_state.min_value > st.session_state.max_value:

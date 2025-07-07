@@ -59,7 +59,7 @@ if reset_btn or st.session_state.min_value > st.session_state.max_value:
     st.session_state.min_value = 1
     st.session_state.max_value = 100
     st.session_state.message = "已重設！請重新猜一個數字。"
-    st.experimental_rerun()
+    st.rerun()
 
 # ---------- 5. 當前狀態提示 ----------
 st.success(st.session_state.message)

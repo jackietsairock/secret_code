@@ -46,10 +46,10 @@ if guess_btn:
         st.session_state.message = f"🎉 恭喜！答案正是 **{secret}**"
     elif g < secret:
         st.session_state.message = "太小了，再試一次！"
-        st.session_state.min_value = g + 1
+        st.session_state.min_value = g
     else:  # g > secret
         st.session_state.message = "太大了，再試一次！"
-        st.session_state.max_value = g - 1
+        st.session_state.max_value = g
 
 # ---------- 4. 重新開始 ----------
 if reset_btn or st.session_state.min_value > st.session_state.max_value:
